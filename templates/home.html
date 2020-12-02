@@ -1,10 +1,14 @@
 {% extends "layout.html" %}
 {% block title %}
 
+Time Explorer
+
 {% endblock %}
 {% block content %}
-<h3>Home</h3>
-<h4>Landing Page for Learning More</h4>
+
+<h3>Time Explorer</h3>
+<h4>Time Now:</h4>
+<p>It's {{ date.strftime("%A, %d %B, %Y at %X") }}.</p>
 _feartures:
 <ul>  
     <li>count between dates</li>
@@ -13,4 +17,6 @@ _feartures:
 </ul>
 
 This space is intended to be the homepage of time explorer.</br>
+
+
 {% endblock %}

@@ -12,7 +12,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template(
+        "home.html",
+        date = datetime.now())
 
 @app.route("/about/")
 def about():
@@ -22,11 +24,11 @@ def about():
 def contact():
     return render_template("contact.html")
 
-@app.route("/now/")
-def now():
-    return render_template(
-         "now.html", 
-        date = datetime.now() )
+#@app.route("/now/")
+#def now():
+#    return render_template(
+#         "now.html", 
+#        date = datetime.now() )
 
 @app.route("/personal/")
 @app.route("/personal/<name>")
@@ -55,9 +57,9 @@ def printoutnow():
     somethingnew = now.__str__()
     return somethingnew
 
-@app.route("/explorer/")
-def exploredates():
-    return render_template("explorer.html")
+#@app.route("/explorer/")
+#def exploredates():
+#    return render_template("explorer.html")
 
 
 

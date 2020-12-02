@@ -3,12 +3,14 @@
 
 {% endblock %}
 {% block content %}
-
+<h3>Personal</h3>
+<h4>Time made for you</h4>
     {%if name %}
         <strong class="message">Hello there, {{ name }}!</strong> 
         It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
     {% else %}
-    <span class="message"> What's your name? Provide it after /hello/ in the URL.</span>
+        <span class="message"> What's your name? Provide it after /hello/ in the URL.</span>
+        <p>Just do it already</p>
     {% endif %}
 
 {% endblock %}
